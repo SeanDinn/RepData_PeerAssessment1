@@ -1,11 +1,12 @@
+# wd = "C:/Users/Amy/Documents/Coursera/Reproducible_Research/Project_1"
+
 #read data into wd and load libraries
 
-proj.data <- read.csv("activity.csv", stringsAsFactors = FALSE)
+        proj.data <- read.csv("activity.csv", stringsAsFactors = FALSE)
+        proj.data$date <- as.Date(proj.data$date, format="%m/%d/%Y")
         library(dplyr)
         library(ggplot2)
-#change data type of date column from factor to Date 
-        proj.data$date <- as.Date(proj.data$date, format="%m/%d/%Y")
-      
+
         
 #Create histogram of #steps per day
         
